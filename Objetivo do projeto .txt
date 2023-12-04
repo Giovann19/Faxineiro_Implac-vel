@@ -1,0 +1,33 @@
+Objetivo do projeto :
+
+
+Código inicial
+CREATE TABLE Livros (
+    livros_id INT PRIMARY KEY,
+    titulo VARCHAR(255),
+    autor VARCHAR(255),
+    editora VARCHAR(255),
+    ano_publicacao INT,
+    isbn VARCHAR(13),
+);
+
+INSERT INTO Livros (id, titulo, autor, editora, ano_publicacao, isbn) VALUES 
+(1, 'A Culpa é das Estrelas', 'John Green', 'Intrínseca', 2012, '978-85-8057-346-6'),
+(2, 'Harry Potter e a Pedra Filosofal', 'J.K. Rowling', 'Rocco', 1997, '9788532511010'),
+(3, 'O Senhor dos Anéis: A Sociedade do Anel', 'J.R.R. Tolkien', 'Martins Fontes', 1954, '9788533603149'),
+(4, 'The Catcher in the Rye', 'J.D. Salinger', 'Little, Brown and Company', '1951', '9780316769488'),
+(5, '1984', 'George Orwell', 'Companhia Editora Nacional', 1949, '978-85-221-0616-9'),
+(6, 'Percy Jackson e o Ladrão de Raios', 'Rick Riordan', 'Intrínseca', 2005, '9788598078355');
+Retirando o pó
+Ainda trabalhando com código acima:
+
+
+1. Adicione a regra AUTO_INCREMENT para a chave primária remova os dados referentes ao ID dos livros do script de inserção.
+
+2. Crie uma tabela para 'Autores' e outra para 'Editoras', para separar essas informações. Elas devem conter chaves primárias para gerar relacionamentos.
+
+3. Utilizando ALTER TABLE, elimine as colunas 'autor' e 'editora' da tabela 'Livros' e adicione as colunas 'autor_id' e 'editora_id' para fazer a referências como chave estrangeiras das referidas tabelas.
+
+4. Retire os valores para autores e para as editoras do script inicial e insira-os nas novas tabelas. 
+Colocando tudo no lugar
+O script abaixo seria para adicionar novos livros na sua biblioteca, mas com as mudanças feitas para normalização e higienização da base é necessário reestruturar a base abaixo para evitar problemas. 
